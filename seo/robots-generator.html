@@ -1,0 +1,12 @@
+<select id="mode">
+<option value="Allow">Allow</option>
+<option value="Disallow">Disallow</option>
+</select>
+<button onclick="gen()">Generate</button>
+<pre id="out"></pre>
+
+<script>
+function gen(){
+ out.textContent=`User-agent: *\n${mode.value}: /`;
+}
+</script>
