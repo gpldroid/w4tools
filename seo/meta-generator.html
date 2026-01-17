@@ -1,0 +1,10 @@
+<textarea id="txt" class="w-full p-3 text-black"></textarea>
+<button onclick="gen()" class="btn">Generate</button>
+<pre id="out"></pre>
+
+<script>
+function gen(){
+ let t=document.getElementById('txt').value;
+ out.textContent=`Title: ${t.slice(0,60)}\nDescription: ${t.slice(0,155)}`;
+}
+</script>
