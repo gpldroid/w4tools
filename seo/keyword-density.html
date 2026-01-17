@@ -1,0 +1,13 @@
+<textarea id="content"></textarea>
+<input id="key" placeholder="keyword">
+<button onclick="check()">Check</button>
+<div id="res"></div>
+
+<script>
+function check(){
+ let c=content.value.toLowerCase();
+ let k=key.value.toLowerCase();
+ let count=(c.match(new RegExp(k,"g"))||[]).length;
+ res.textContent=`Occurrences: ${count}`;
+}
+</script>
