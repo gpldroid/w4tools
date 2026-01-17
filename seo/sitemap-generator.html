@@ -1,0 +1,12 @@
+<textarea id="urls"></textarea>
+<button onclick="gen()">Generate</button>
+<pre id="out"></pre>
+
+<script>
+function gen(){
+ let u=urls.value.split('\n');
+ out.textContent=`<?xml version="1.0"?>\n<urlset>\n`+
+ u.map(x=>`<url><loc>${x}</loc></url>`).join('\n')+
+ `\n</urlset>`;
+}
+</script>
